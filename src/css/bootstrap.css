@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-:root {
+ :root {
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -91,7 +91,11 @@ hr {
 }
 
 h1,
-h2,
+h2 { 
+    margin-top:0px; 
+    margin-bottom: 20px;
+    color: #000 !important
+}
 h3,
 h4,
 h5,
@@ -8184,7 +8188,8 @@ button.bg-dark:hover {
 }
 
 .text-primary {
-    color: #4b6660 !important
+    color: #4b6660; 
+    font-weight:600 !important
 }
 
 a.text-primary:focus,
@@ -8211,7 +8216,8 @@ a.text-success:hover {
 }
 
 .text-info {
-    color: #4b8a7d !important
+    font-weight: 620;
+    color: black !important
 }
 
 a.text-info:focus,
