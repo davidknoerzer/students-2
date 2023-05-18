@@ -42,12 +42,15 @@ function toggleNavigation(event) {
     event.preventDefault();
 
     var content = document.getElementById('nav-bar-content');
-    if (content.classList.contains('collapse')) {
-        content.classList.remove('collapse');
+    var expanded = content.getAttribute('aria-expanded');
+
+    if (expanded === 'true') {
+        content.setAttribute('aria-expanded', 'false');
     } else {
-        content.classList.add('collapse');
+        content.setAttribute('aria-expanded', 'true');
     }
 }
+
 
 document.addEventListener('DOMContentLoaded', function () {
     var dropDownToggles = document.querySelectorAll('#nav-bar-content .dropdown-toggle');
