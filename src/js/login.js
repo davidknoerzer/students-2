@@ -77,14 +77,34 @@ function validateLastName(lastNameElement) {
     return true;
 }
 
-function validateProgramme(programmeElement) {
-    if (!programmeElement.validity.valid) {
-        setInvalid(programmeElement, "Please select a program");
-        return false;
+function validateProgramme(programme) {
+    var programmeInputs = programme.querySelectorAll('input[name="programme"]');
+    var selectedProgramme = false;
+
+    for (var i = 0; i < programmeInputs.length; i++) {
+        if (programmeInputs[i].checked) {
+            selectedProgramme = true;
+            break;
+        }
     }
-    setValid(programmeElement);
-    return true;
+
+    if (!selectedProgramme) {
+        for (var i = 0; i < programmeInputs.length; i++) {
+            programmeInputs[i].classList.add('is-invalid');
+        }
+        document.getElementById('register-programme-error').textContent = 'Please select a programme.';
+        return false;
+    } else {
+        for (var i = 0; i < programmeInputs.length; i++) {
+            programmeInputs[i].classList.remove('is-invalid');
+        }
+        document.getElementById('register-programme-error').textContent = '';
+        return true;
+    }
 }
+
+
+
 
 function login(event) {
     event.preventDefault();

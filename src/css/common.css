@@ -5,6 +5,8 @@ html {
 body,
 html {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body a,
@@ -21,13 +23,10 @@ body a:hover {
     font-size: 2rem;
     font-weight: 100;
     color: black !important;
-
 }
 
 .subtitle {
     font-size: 1.2rem;
-
-
 }
 
 .header .logo {
@@ -61,31 +60,66 @@ body a:hover {
 }
 
 .news .media {
-    border-bottom: 1px solid #9e9e9e
+    border-bottom: 1px solid #9e9e9e;
 }
 
 .news .media img {
-    width: 5rem
+    width: 5rem;
 }
 
 .researches li,
 .studies li {
-    margin-top: 1.2rem
+    margin-top: 1.2rem;
 }
 
 #title-placeholder,
 #text-placeholder {
-    color: #000000 !important
+    color: #000000 !important;
 }
 
 caption {
-    color: black
+    color: black;
 }
 
 #description {
-    color: black
+    color: black;
 }
 
 .navbar-dark .navbar-nav .nav-link {
     color: white;
+}
+
+.dropdown-list {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.dropdown-list li {
+    position: relative;
+}
+
+.dropdown-list li::before {
+    content: "•";
+    position: absolute;
+    left: -10px;
+}
+
+.dropdown-list li ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.dropdown-list li ul li::before {
+    content: "-";
+    position: absolute;
+    left: -20px;
+}
+
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: sticky;
+    top: 100vh;
 }

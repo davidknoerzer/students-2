@@ -42,12 +42,15 @@ function toggleNavigation(event) {
     event.preventDefault();
 
     var content = document.getElementById('nav-bar-content');
-    if (content.classList.contains('collapse')) {
-        content.classList.remove('collapse');
+    var expanded = content.getAttribute('aria-expanded');
+
+    if (expanded === 'true') {
+        content.setAttribute('aria-expanded', 'false');
     } else {
-        content.classList.add('collapse');
+        content.setAttribute('aria-expanded', 'true');
     }
 }
+
 
 document.addEventListener('DOMContentLoaded', function () {
     var dropDownToggles = document.querySelectorAll('#nav-bar-content .dropdown-toggle');
@@ -62,30 +65,35 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     document.querySelector('.navbar-toggler').addEventListener('click', toggleNavigation, false);
+
     document.addEventListener('keydown', function (event) {
-        if (event.key === 'Tab') {
+        if (event.code === 'Tab') {
             var openMenus = document.querySelectorAll('.dropdown-menu.show');
             for (var j = 0; j < openMenus.length; j++) {
                 openMenus[j].classList.remove('show');
             }
-        } else if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+        } else if (event.code === 'ArrowDown' || event.code === 'ArrowUp') {
             var currentMenu = document.querySelector('.dropdown-menu.show');
             if (currentMenu) {
                 var menuItems = currentMenu.querySelectorAll('.dropdown-item');
                 if (menuItems.length > 0) {
                     event.preventDefault();
                     var currentIndex = Array.from(menuItems).indexOf(document.activeElement);
-                    var newIndex = event.key === 'ArrowDown' ? (currentIndex + 1) % menuItems.length : (currentIndex - 1 + menuItems.length) % menuItems.length;
+                    var newIndex = event.code === 'ArrowDown' ? (currentIndex + 1) % menuItems.length : (currentIndex - 1 + menuItems.length) % menuItems.length;
                     menuItems[newIndex].focus();
                 }
             }
+        } else if (event.code === 'Escape') {
+            var openMenu = document.querySelector('.dropdown-menu.show');
+            if (openMenu) {
+                closeMenu(event);
+            }
+        } else if (event.code === 'Space') {
+            event.preventDefault();
+            event.target.click();
         }
     }, false);
 }, false);
-
-// TODO SPACE KEY FUNCTIONALITY
-
-// From here are the groups changes
 
 function changeFontSize(increaseFactor) {
     var txt = document.getElementById('root');
