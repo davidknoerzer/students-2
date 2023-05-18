@@ -214,7 +214,7 @@
                                 characters long and contain both letters and numbers.</small>
                         </div>
                         <!-- TODO use fieldset which contains radio buttons to replace the dropdown list below -->
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="register-programme-control">Programme(required)</label>
                             <select class="form-control" id="register-programme-control" required>
                                 <option value="">Please select your education or research programme</option>
@@ -224,7 +224,32 @@
                                 <option value="doctorate">Doctorate</option>
                             </select>
                             <small class="invalid-feedback" id="register-programme-error" aria-live="assertive"></small>
-                        </div>
+                        </div> -->
+                        <!-- I tried to add a fieldset with radio button -->
+                            <div class="form-group">
+                                <!-- I changed the required to required aria-required="true" -->
+                                <fieldset required> 
+                                    <label for="register-programme-control">Programme(required)</label>                              
+                                    <div> 
+                                        <input type="radio" name="degree" id="bachelor" value="bachelor" required aria-required="true"> <label for="bachelor">Bachelor degree</label> 
+                                    </div> 
+                                    <div> 
+                                        <input type="radio" name="degree" id="master" value="master" required aria-required="true"> <label for="master">Master degree</label> 
+                                    </div> 
+                                    <div> 
+                                        <input type="radio" name="degree" id="continuing" value="continuing" required aria-required="true"> <label for="continuing">Continuing education</label> 
+                                    </div> 
+                                    <div> 
+                                        <input type="radio" name="degree" id="doctorate" value="doctorate" required aria-required="true"> <label for="doctorate">Doctorate</label> 
+                                    </div> 
+                                </fieldset>
+                                <!-- this alert doesn't work -->
+                                <small class="invalid-feedback" id="register-programme-error" aria-live="assertive"></small>
+                            </div>
+
+
+
+
                         <div class="form-group">
                             <fieldset>
                                 <legend id="register-address-legend">Additional information <small
