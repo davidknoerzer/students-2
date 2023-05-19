@@ -17,8 +17,8 @@
                 <div class="col-8 media">
                     <a href="index.html">
                         <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg" alt="Company Logo"
-                        height="80" aria-label="Company Logo"> 
-                    </a>                    
+                            height="80" aria-label="Company Logo">
+                    </a>
                     <div class="media-body align-self-center">
                         <h1 class="mb-0 title" aria-label="Website Title">Lorem Ipsum</h1>
                         <p aria-label="Institution Name">Institute of Technology</p>
@@ -40,9 +40,9 @@
         </div>
     </header>
     <div>
-        <!-- The anchor points to the id of the element --> 
-        <a class='screenreader-text' href="#main" >Skip to main content</a>
-        <a class='screenreader-text' href="#footer" >Skip to footer</a>
+        <!-- The anchor points to the id of the element -->
+        <a class='sr-only' href="#main">Skip to main content</a>
+        <a class='sr-only' href="#footer">Skip to footer</a>
     </div>
     <nav class="container-fluid bg-dark nav" role="navigation">
         <div class="container">
@@ -126,7 +126,7 @@
                     <form id="login-form" novalidate>
                         <fieldset>
                             <legend id="register-basicInformation-legend">Login <small
-                                class="text-secondary">(required)</small></legend> 
+                                    class="text-secondary">(required)</small></legend>
                             <div class="form-group">
                                 <label for="login-email-control" class="sr-only">Email (required)</label>
                                 <input class="form-control" id="login-email-control" type="email" placeholder="Email"
@@ -148,9 +148,11 @@
                                 </div>
                             </div>
                             <label for="login-login-button" class="sr-only">Login</label>
-                            <button class="btn btn-primary" id="login-login-button" type="submit" aria-label="Login">Login</button>
+                            <button class="btn btn-primary" id="login-login-button" type="submit"
+                                aria-label="Login">Login</button>
                             <label for="login-forgot-button" class="sr-only">Forgot Password</label>
-                            <button class="btn btn-link text-danger ml-3" id="login-forgot-button" type="button" aria-label="Forgot password">Forgot
+                            <button class="btn btn-link text-danger ml-3" id="login-forgot-button" type="button"
+                                aria-label="Forgot password">Forgot
                                 password</button>
                         </fieldset>
                     </form>
@@ -168,7 +170,7 @@
                                 class="text-secondary">(required)</small></legend> -->
                         <fieldset>
                             <legend id="register-basicInformation-legend">Basic information <small
-                                class="text-secondary">(required)</small></legend>
+                                    class="text-secondary">(required)</small></legend>
                             <div class="form-group">
                                 <label for="register-first-name-control">First name (required)</label>
                                 <input class="form-control" type="text" id="register-first-name-control"
@@ -196,19 +198,20 @@
                                 <small class="invalid-feedback" id="register-password-error"
                                     aria-live="assertive"></small>
                                 <small id="register-password-help" class="form-text text-muted">Your password must be
-                                    8-16 
+                                    8-16
                                     characters long and contain both letters and numbers.</small>
                             </div>
                         </fieldset>
                         <!-- <legend>Programme <small class="text-secondary">(required)</small></legend> -->
                         <fieldset>
                             <legend id="register-basicInformation-legend">Education or Research Programme <small
-                                class="text-secondary">(required)</small></legend>
+                                    class="text-secondary">(required)</small></legend>
                             <div class="form-group" id="register-programme-control">
                                 <!-- <label>Education or Research Programme (required)</label> -->
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="programme"
-                                        id="programme-bachelor" value="bachelor" required aria-required="true" aria-label="bachelor">
+                                        id="programme-bachelor" value="bachelor" required aria-required="true"
+                                        aria-label="bachelor">
                                     <label class="form-check-label" for="programme-bachelor">Bachelor</label>
                                 </div>
                                 <div class="form-check">
@@ -218,13 +221,15 @@
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="programme"
-                                        id="programme-continuing" value="continuing" required aria-required="true" aria-label="continuing">
+                                        id="programme-continuing" value="continuing" required aria-required="true"
+                                        aria-label="continuing">
                                     <label class="form-check-label" for="programme-continuing">Continuing
                                         Education</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="programme"
-                                        id="programme-doctorate" value="doctorate" required aria-required="true" aria-label="doctorate">
+                                        id="programme-doctorate" value="doctorate" required aria-required="true"
+                                        aria-label="doctorate">
                                     <label class="form-check-label" for="programme-doctorate">Doctorate</label>
                                 </div>
                                 <small class="invalid-feedback" id="register-programme-error"
@@ -259,14 +264,15 @@
                                 </div>
                             </fieldset>
                         </div>
-                        <label for="register-register-button" class="sr-only" >Register</label>
-                        <button type="submit" class="btn btn-primary" id="register-register-button" aria-label="Register">Register</button>
+                        <label for="register-register-button" class="sr-only">Register</label>
+                        <button type="submit" class="btn btn-primary" id="register-register-button"
+                            aria-label="Register">Register</button>
                     </form>
                 </div>
             </div>
         </div>
     </main>
-    <footer id = "footer" class="container-fluid bg-dark mt-4 footer">
+    <footer id="footer" class="container-fluid bg-dark mt-4 footer">
         <div class="container text-center py-3">
             <div class="row justify-content-around">
                 <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About" aria-label="About">About</a>
