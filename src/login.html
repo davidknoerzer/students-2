@@ -120,6 +120,8 @@
                     </div>
                     <form id="login-form" novalidate>
                         <fieldset>
+                            <legend id="register-basicInformation-legend">Login <small
+                                class="text-secondary">(required)</small></legend> 
                             <div class="form-group">
                                 <label for="login-email-control" class="sr-only">Email (required)</label>
                                 <input class="form-control" id="login-email-control" type="email" placeholder="Email"
@@ -157,9 +159,11 @@
                     </div>
                     <ul class="sr-only" id="register-error-list" aria-live="polite"></ul>
                     <form id="register-form" novalidate>
-                        <legend id="register-basicInformation-legend">Basic information <small
-                                class="text-secondary">(required)</small></legend>
+                        <!-- <legend id="register-basicInformation-legend">Basic information <small
+                                class="text-secondary">(required)</small></legend> -->
                         <fieldset>
+                            <legend id="register-basicInformation-legend">Basic information <small
+                                class="text-secondary">(required)</small></legend>
                             <div class="form-group">
                                 <label for="register-first-name-control">First name (required)</label>
                                 <input class="form-control" type="text" id="register-first-name-control"
@@ -193,8 +197,10 @@
                         </fieldset>
                         <legend>Programme <small class="text-secondary">(required)</small></legend>
                         <fieldset>
+                            <legend id="register-basicInformation-legend">Education or Research Programme <small
+                                class="text-secondary">(required)</small></legend>
                             <div class="form-group" id="register-programme-control">
-                                <label>Education or Research Programme (required)</label>
+                                <!-- <label>Education or Research Programme (required)</label> -->
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="programme"
                                         id="programme-bachelor" value="bachelor" required>
