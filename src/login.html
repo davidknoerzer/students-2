@@ -125,27 +125,27 @@
                             <div class="form-group">
                                 <label for="login-email-control" class="sr-only">Email (required)</label>
                                 <input class="form-control" id="login-email-control" type="email" placeholder="Email"
-                                    required aria-required="true">
+                                    required aria-required="true" aria-label="emailForLogin">
                                 <small class="invalid-feedback" id="login-email-error" aria-live="assertive"></small>
                             </div>
                             <div class="form-group">
                                 <label for="login-password-control" class="sr-only">Password (required)</label>
                                 <input class="form-control" id="login-password-control" type="password"
-                                    placeholder="Password" required aria-required="true">
+                                    placeholder="Password" required aria-required="true" aria-label="password">
                                 <small class="invalid-feedback" id="login-password-error" aria-live="assertive"></small>
                             </div>
                             <div class="form-group">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="remember"
-                                        id="login-remember-control">
+                                        id="login-remember-control" aria-label="keep Me Logged In">
                                     <label class="form-check-label" for="login-remember-control">Keep me logged
                                         in</label>
                                 </div>
                             </div>
                             <label for="login-login-button" class="sr-only">Login</label>
-                            <button class="btn btn-primary" id="login-login-button" type="submit">Login</button>
+                            <button class="btn btn-primary" id="login-login-button" type="submit" aria-label="Login">Login</button>
                             <label for="login-forgot-button" class="sr-only">Forgot Password</label>
-                            <button class="btn btn-link text-danger ml-3" id="login-forgot-button" type="button">Forgot
+                            <button class="btn btn-link text-danger ml-3" id="login-forgot-button" type="button" aria-label="Forgot password">Forgot
                                 password</button>
                         </fieldset>
                     </form>
@@ -167,35 +167,35 @@
                             <div class="form-group">
                                 <label for="register-first-name-control">First name (required)</label>
                                 <input class="form-control" type="text" id="register-first-name-control"
-                                    placeholder="First name" required aria-required="true">
+                                    placeholder="First name" required aria-required="true" aria-label="FirstName">
                                 <small class="invalid-feedback" id="register-first-name-error"
                                     aria-live="assertive"></small>
                             </div>
                             <div class="form-group">
                                 <label for="register-last-name-control">Last name (required)</label>
                                 <input class="form-control" type="text" id="register-last-name-control"
-                                    placeholder="Last name" required aria-required="true">
+                                    placeholder="Last name" required aria-required="true" aria-label="LastName">
                                 <small class="invalid-feedback" id="register-last-name-error"
                                     aria-live="assertive"></small>
                             </div>
                             <div class="form-group">
                                 <label for="register-email-control">Email (required)</label>
                                 <input class="form-control" id="register-email-control" type="email"
-                                    placeholder="john.doe@email.com" required aria-required="true">
+                                    placeholder="john.doe@email.com" required aria-required="true" aria-label="Email">
                                 <small class="invalid-feedback" id="register-email-error" aria-live="assertive"></small>
                             </div>
                             <div class="form-group">
                                 <label for="register-password-control">Password (required)</label>
                                 <input class="form-control" id="register-password-control" type="password"
-                                    placeholder="Password" required aria-required="true">
+                                    placeholder="Password" required aria-required="true" aria-label="password">
                                 <small class="invalid-feedback" id="register-password-error"
                                     aria-live="assertive"></small>
                                 <small id="register-password-help" class="form-text text-muted">Your password must be
-                                    8-16
+                                    8-16 
                                     characters long and contain both letters and numbers.</small>
                             </div>
                         </fieldset>
-                        <legend>Programme <small class="text-secondary">(required)</small></legend>
+                        <!-- <legend>Programme <small class="text-secondary">(required)</small></legend> -->
                         <fieldset>
                             <legend id="register-basicInformation-legend">Education or Research Programme <small
                                 class="text-secondary">(required)</small></legend>
@@ -203,23 +203,23 @@
                                 <!-- <label>Education or Research Programme (required)</label> -->
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="programme"
-                                        id="programme-bachelor" value="bachelor" required>
+                                        id="programme-bachelor" value="bachelor" required aria-required="true" aria-label="bachelor">
                                     <label class="form-check-label" for="programme-bachelor">Bachelor</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="programme" id="programme-master"
-                                        value="master" required>
+                                        value="master" required aria-required="true" aria-label="master">
                                     <label class="form-check-label" for="programme-master">Master</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="programme"
-                                        id="programme-continuing" value="continuing" required>
+                                        id="programme-continuing" value="continuing" required aria-required="true" aria-label="continuing">
                                     <label class="form-check-label" for="programme-continuing">Continuing
                                         Education</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="programme"
-                                        id="programme-doctorate" value="doctorate" required>
+                                        id="programme-doctorate" value="doctorate" required aria-required="true" aria-label="doctorate">
                                     <label class="form-check-label" for="programme-doctorate">Doctorate</label>
                                 </div>
                                 <small class="invalid-feedback" id="register-programme-error"
@@ -233,29 +233,29 @@
                                 <div class="form-group">
                                     <label for="register-street-control">Street</label>
                                     <input class="form-control" id="register-street-control" type="text"
-                                        placeholder="Street">
+                                        placeholder="Street" aria-label="street">
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-12 col-lg-5">
                                         <label for="register-city-control">City</label>
                                         <input class="form-control" id="register-city-control" type="text"
-                                            placeholder="City">
+                                            placeholder="City" aria-label="city">
                                     </div>
                                     <div class="form-group col-12 col-lg-4">
                                         <label for="register-state-control">State</label>
                                         <input class="form-control" id="register-state-control" type="text"
-                                            placeholder="State">
+                                            placeholder="State" aria-label="state">
                                     </div>
                                     <div class="form-group col-12 col-lg-3">
                                         <label for="register-zip-control">Zip</label>
                                         <input class="form-control" id="register-zip-control" type="text"
-                                            placeholder="Zip">
+                                            placeholder="Zip" aria-label="zip">
                                     </div>
                                 </div>
                             </fieldset>
                         </div>
-                        <label for="register-register-button" class="sr-only">Register</label>
-                        <button type="submit" class="btn btn-primary" id="register-register-button">Register</button>
+                        <label for="register-register-button" class="sr-only" >Register</label>
+                        <button type="submit" class="btn btn-primary" id="register-register-button" aria-label="Register">Register</button>
                     </form>
                 </div>
             </div>
